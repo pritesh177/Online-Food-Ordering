@@ -1,0 +1,154 @@
+Model:
+	User:
+		public class User{
+			Long id,
+			fullname,
+			email,
+			password,
+			role,
+			orders,
+			favorites,
+			address,
+			status
+	}
+
+	Restaurant:
+		public class Restaurant{
+			id,
+			owner,
+			name,
+			description,
+			cuisineType,
+			address,
+			contactInformation,
+			openeingHours,
+			reviews,
+			orders,
+			numRating,
+			images,
+			registrationDate,
+			open,
+			foods			
+	}
+
+	Food:
+		public class Food{
+			id,
+			name,
+			description,
+			price,
+			foodCategory,
+			images,
+			available,
+			restaurant,
+			isVegetarion,
+			isSeasonal,
+			ingredients,
+			creationDate			
+	}
+
+	Food Category:
+		public class foodCategory{
+			id,
+			name,
+			restaurant	
+	}
+
+	Ingredients:
+		public class IngredientCategory{
+			id,
+			name,
+			restaurant,
+			ingredients
+	}
+		
+		public class IngredientItem{
+			id,
+			name,
+			category,
+			restaurant,
+			inStock
+	}
+
+	Event:
+		public class Event{
+			id,
+			image,
+			startedAt,
+			endsAt,
+			name,
+			restaurant,
+			location
+	}
+
+	order:
+		public class order{
+			id,
+			customer,
+			restaurant,
+			totalAmount,
+			orderStatus,
+			createdAt,
+			deliveryAddress,
+			items,
+			payments,
+			totalItems,
+			totalPrice
+	}
+
+	order item:
+		public class OrderItem{
+			id,
+			food,
+			quantity,
+			totalPrice,
+			ingredients
+	}
+
+	Cart:
+		public class Cart{
+			id,
+			customer,
+			items,
+			total
+	}
+
+	Cart Item:
+		public class Cartitems{
+			id,
+			cart,
+			food,
+			quantity,
+			ingredients,
+			totalPrice
+	}
+
+
+Project Structure:
+
+project_root/
+│
+├── src/
+│   ├── controllers/        // Controllers handle request/response logic
+│   │   ├── itemController.js
+│   │   └── ...
+│   │
+│   ├── models/            // Database models/schema
+│   │   ├── itemModel.js
+│   │   └── ...
+│   │
+│   ├── routes/            // API routes
+│   │   ├── itemRoutes.js
+│   │   └── ...
+│   │
+│   ├── services/          // Business logic and data processing
+│   │   ├── itemService.js
+│   │   └── ...
+│   │
+│   └── app.js             // Entry point of the application
+│
+├── .env                   // Environment variables
+├── package.json           // Project dependencies and metadata
+└── ...
+
+		
