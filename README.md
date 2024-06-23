@@ -3,89 +3,17 @@
 
 Model:
  Entities:
-  User:
-     	Long id;
-     	fullName;
-     	email;
-     	password;
-     	role;
-     	orders;
-     	favorites
-     	addresses 
-     	status;
- Restaurant
-        id;
-        owner;
-        name;
-        description;
-        cuisineType;
-        address;
-        contactInformation;
-        openingHours;
-        reviews;
-        orders;
-        numRating;
-        images;
-        registrationDate;
-        open;
-        foods;
-  Food:
-        id;
-        name;
-        description;
-        price;
-        foodCategory;
-        images;
-        available;
-        restaurant;
-        isVegetarian;
-        isSeasonal;
-        ingredients;
-        creationDate;
-  Food Category:
-          id;
-        name;
-        restaurant;
-  Ingredients:
-         id;
-        name;
-        restaurant;
-        ingredients;
-IngredientsItem: 
-        id;
-        name;
-        category;
-        restaurant;
-        inStock;
-  Event:
-        id;
-        image;
-        startedAt;
-        endsAt;
-        name;
-        restaurant;
-        location;
+    User:
+    Restaurant
+    Food:
+    Food Category:
+    Ingredients:
+    IngredientsItem: 
+    Event:
     Order:
-        id;
-        customer;
-        restaurant;
-        totalAmount;
-        orderStatus;
-        createdAt;
-        deliveryAddress;
-        items;
-        payment;
-        totalItem;
-    order item:
-        id;
-        food;
-        quantity;
-        totalPrice;
-        ingredients;
+    Order item:
     Cart:
-        id;
-        customer;
-        items;
-        total;
     Cart Item:
+
+  Added Restaurant API to perform restaurant related activites.
        
